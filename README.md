@@ -1,97 +1,136 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/AcZuKmWJ)
-# README: IHEC Student Chatbot Project
+# EKO - IHEC Chatbot
 
-## Table of Contents
-1. [Project Context and Objectives](#project-context-and-objectives)
-   - [Context](#context)
-   - [Objectives](#objectives)
-2. [Functional Scope](#functional-scope)
-   - [Core Features](#core-features)
-   - [Use Cases](#use-cases)
-   - [Optional Features](#optional-features)
-3. [Technical Constraints](#technical-constraints)
-   - [Website Integration](#website-integration)
-   - [Data Storage](#data-storage)
-   - [Security Standards](#security-standards)
-   - [Performance and Accessibility](#performance-and-accessibility)
-4. [Design and UX/UI](#design-and-uxui)
-   - [Graphic Guidelines](#graphic-guidelines)
-   - [Ergonomics](#ergonomics)
-5. [Deliverables](#deliverables)
+EKO is an advanced chatbot designed to provide students and staff at IHEC (Institut des Hautes Études Commerciales) with reliable, contextual, and dynamic responses to their queries. By leveraging AI and a combination of structured and unstructured data, EKO aims to enhance the user experience and streamline access to institutional information. This project builds upon the foundational work described in the IHEC Data Processing Pipeline and represents a fully dynamic chatbot solution aligned with the objectives of that pipeline.
+![image](https://github.com/user-attachments/assets/5459efcb-dec9-4011-ab01-c9e8b0e05f28)
 
 ---
 
-## Project Context and Objectives
+## Features
 
-### Context
-The **Institut des Hautes Études Commerciales (IHEC)** aims to integrate an intelligent chatbot into its current website to efficiently address frequently asked questions from students. These questions may relate to administration, academic programs, registration, schedules, exams, and more.
+1. **Dynamic Query Handling**:
+   - Answers queries directly from a structured JSON dataset or provides context from institutional PDFs.
+   - Processes natural language queries to identify relevant answers.
 
-### Objectives
-- **Facilitate access to information** for students.
-- Provide a **fast, 24/7, and user-friendly experience**.
-- Ensure the chatbot adheres to the website’s **graphic guidelines** and **security standards**.
+2. **Advanced Data Processing**:
+   - Combines structured (JSON) and unstructured (PDF) data sources.
+   - Creates embeddings for efficient semantic search using FAISS.
 
----
+3. **Contextual AI**:
+   - Utilizes **LLaMA 3.2** for generating responses in French.
+   - Embeds relevant context from datasets and documents for accurate replies.
 
-## Functional Scope
+4. **Data Privacy**:
+   - Sanitizes user queries to prevent the handling of personal data such as phone numbers or emails.
 
-### Core Features
-- **Automated responses** to frequently asked questions (FAQ).
-- **Guided navigation** to direct students to relevant resources (e.g., documents, forms).
-- **Keyword-based search system** (e.g., "schedule," "registration").
-- **Multilingual support** (French and English, based on IHEC’s needs).
-
-### Use Cases
-1. **Common Question**:  
-   *"What documents are required for registration?"*  
-   The chatbot should provide a precise answer and direct the user to the appropriate section of the website.
-
-2. **Advanced Search**:  
-   *"I want to view the Marketing program curriculum."*  
-   The chatbot should provide a direct link to the relevant program.
-
-### Optional Features
-- Integration of a **feedback system** to improve chatbot performance.
+5. **Robust Architecture**:
+   - Built using Flask for a lightweight and scalable web service.
+   - Seamlessly integrates FAISS, SentenceTransformers, and Ollama for enhanced NLP capabilities.
 
 ---
 
-## Technical Constraints
+## Models and Tools Used
 
-### Website Integration
-- The chatbot must seamlessly integrate into the **existing IHEC website**, adhering to its graphic guidelines (fonts, colors, logos).
-- No dependency on external services like OpenAI, Gemini, or other non-locally hosted APIs.
-- Limited hardware resources.
+### 1. **FAISS** (Facebook AI Similarity Search)
+   - Indexes and retrieves relevant chunks of text from PDFs for semantic search.
+   - Reduces latency and ensures high-accuracy context retrieval.
 
-### Data Storage
-- Use of **CSV files** or **JSON objects** for data storage.
+### 2. **LLaMA 3.2** (Response Generation)
+   - Generates conversational, natural, and formal responses in French tailored to the IHEC audience.
 
-### Security Standards
-- Compliance with **GDPR** for user data protection.
-- Encryption of sensitive data.
-- No storage of user data (e.g., email, phone number).
-- Restricted access to collected data, limited to authorized administrators.
+### 3. **SentenceTransformers** (Embedding Model)
+   - Uses `all-MiniLM-L6-v2` to encode text into semantic embeddings for efficient indexing and searching.
 
-### Performance and Accessibility
-- Fast loading on both **mobile** and **desktop** devices.
-- Compatibility with major browsers (Chrome, Firefox, Safari, Edge).
-- **Responsive** and intuitive interface.
+### 4. **Flask Framework**
+   - Serves as the backend for hosting the chatbot interface and handling user interactions.
+
+### 5. **PDFPlumber** (PDF Text Extraction)
+   - Extracts text content from PDF documents, enabling the chatbot to provide responses based on institutional policies and historical data.
 
 ---
 
-## Design and UX/UI
+## Workflow
 
-### Graphic Guidelines
-- Strict adherence to IHEC’s **color scheme**, **fonts**, and **graphic styles**.
-- A **floating button** (or visible in a corner of the page) to access the chatbot.
+1. **Data Preparation**:
+   - Extracts structured Q&A pairs from `dataset.json`.
+   - Extracts and preprocesses text from PDF documents.
 
-### Ergonomics
-- Simple and intuitive interface.
-- Responses displayed in an **interactive dialogue format**.
-- Option to go back or rephrase a question.
+2. **FAISS Indexing**:
+   - Combines JSON and PDF data into text chunks.
+   - Embeds chunks using SentenceTransformers and stores them in a FAISS index for semantic retrieval.
+
+3. **Dynamic Query Handling**:
+   - Matches user queries against the dataset for direct answers.
+   - If no exact match is found, searches FAISS for the most relevant context.
+
+4. **Response Generation**:
+   - Uses LLaMA 3.2 to formulate responses based on retrieved context.
+   - Handles edge cases (e.g., no relevant data found) gracefully by responding "Je ne sais pas."
+
+5. **Web Interface**:
+   - Provides an intuitive interface for user interaction via Flask.
 
 ---
 
-## Deliverables
-- A fully **operational chatbot** that can be easily integrated into the IHEC website.
-- **Technical documentation** for maintenance and future updates.
-- A **user manual** for IHEC administrative staff.
+## Technical Importance
+
+The development of EKO builds upon the foundation established by the **IHEC Data Processing Pipeline**. Key contributions include:
+
+- **Dynamic Data Integration**: The pipeline’s structured outputs are utilized directly for chatbot responses, ensuring that the chatbot always reflects the latest institutional updates.
+- **Semantic Search**: Advanced embeddings and FAISS indexing enable contextually relevant answers, even for nuanced queries.
+- **Context-Rich Interaction**: Combines insights from PDFs and FAQs, allowing for deeper, more informed responses.
+- **Scalable Architecture**: Modular design allows for easy updates as institutional needs evolve.
+
+By aligning with the foundational objectives described in the IHEC Data Processing Pipeline README, this project exemplifies the synergy between data engineering and AI-driven conversational systems, delivering a truly dynamic chatbot experience.
+
+---
+
+## Deployment
+
+### Prerequisites
+
+1. **Python 3.8+**
+2. **Dependencies**:
+   - `flask`
+   - `faiss`
+   - `sentence-transformers`
+   - `pdfplumber`
+   - `ollama`
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/eko-chatbot.git
+   cd eko-chatbot
+   ```
+
+2. Prepare data files (`dataset.json`, `IHEC PDF`):
+   - Place them in the project root.
+
+3. Run the application:
+   ```bash
+   python app.py
+   ```
+4. Access the chatbot at:
+   ```
+   http://localhost:5000
+   ```
+
+---
+
+## Outputs
+
+1. **Real-Time Chat Responses**: Provides accurate, formal, and student-friendly answers in French.
+2. **Error Handling**: Ensures robust fallback mechanisms for unsupported queries.
+3. **Semantic Search Results**: Retrieves relevant document sections dynamically from FAISS.
+
+---
+
+## Future Enhancements
+
+- Integration with additional data sources, such as IHEC’s live databases.
+- Support for multilingual queries and responses.
+- Advanced analytics to monitor chatbot performance and improve user satisfaction.
+
+---
+The database was renewed using this repo : https://github.com/cheedli/IHEC-SCRIPTS
