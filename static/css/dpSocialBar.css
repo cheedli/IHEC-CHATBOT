@@ -1,0 +1,332 @@
+/*** GENERAL STYLES ***/
+
+.dpSocialBar_container {
+	position:fixed;
+	left:0;
+	top:100px;
+	width:34px;
+	border: 1px solid #dbdbdb;
+	-moz-border-radius: 0 5px 5px 0;
+	-webkit-border-radius: 0 5px 5px 0;
+	border-radius: 0 5px 5px 0;
+	z-index:9999;
+}
+
+
+.dpSocialBar_container .dpSocialBar_wrap {
+	position:relative;
+	z-index:999;
+	border:1px solid #ffffff;
+	background:#f4f4f4;
+	widrh:100%;
+	min-height:34px;
+	min-width:30px;
+	-moz-border-radius: 0 3px 3px 0;
+	-webkit-border-radius: 0 3px 3px 0;
+	border-radius: 0 3px 3px 0;
+	overflow:hidden;
+}
+
+.dpSocialBar_container .dpSocialBar_arrow_down {
+	position:absolute;
+	bottom:-30px;
+	left:5px;
+	width:22px;
+	height:22px;
+	background:url(images/socialNetworking/arrows.png) no-repeat 0 0;
+	z-index:9999;
+}
+
+.dpSocialBar_container .dpSocialBar_arrow_down:hover {
+	background-position:-22px 0;
+}
+
+.dpSocialBar_container .dpSocialBar_arrow_down:active {
+	background-position:-44px 0;
+}
+
+.dpSocialBar_container .dpSocialBar_arrow_up {
+	position:absolute;
+	top:-30px;
+	left:5px;
+	width:22px;
+	height:22px;
+	background:url(images/socialNetworking/arrows.png) no-repeat 0 -22px;
+	z-index:9999;
+	display:none;
+}
+
+.dpSocialBar_container .dpSocialBar_arrow_up:hover {
+	background-position:-22px -22px;
+}
+
+.dpSocialBar_container .dpSocialBar_arrow_up:active {
+	background-position:-44px -22px;
+}
+
+.dpSocialBar_container .dpSocialBar_wrap .dpSocialBar_icon {
+	border:0;
+	width:24px;
+	height:24px;
+	position:relative;
+	opacity:0.7;
+}
+
+.dpSocialBar_container .dpSocialBar_wrap a {
+	margin:5px 3px;
+}
+
+.dpSocialBar_container .dpSocialBar_caption {
+	opacity:0;
+	position:absolute;
+	display:none;
+	border:1px solid #dbdbdb;
+}
+
+.dpSocialBar_container .dpSocialBar_caption span {
+	color:#000;
+	font-size:10px;
+	font-family:Tahoma, Geneva, sans-serif;
+	text-align:center;
+	padding:5px 10px;
+	min-width:100px;
+	background:#f4f4f4;
+	border:1px solid #fff;
+	display:block;
+}
+
+.dpSocialBar_container .dpSocialBar_wrap .dpSocialBar_icon:hover {
+	opacity:1;
+}
+
+/*** POSITION ***/
+.dpSocialBar_container.right{
+	left:auto;
+	right:0;
+	width:34px;
+	-moz-border-radius: 5px 0 0 5px;
+	-webkit-border-radius: 5px 0 0 5px;
+	border-radius: 5px 0 0 5px;
+}
+
+.dpSocialBar_container.top{
+	left:100px;
+	top:0;
+	height:35px;
+	width:auto;
+	-moz-border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+	border-top:0;
+	padding-bottom:1px;
+}
+
+.dpSocialBar_container.bottom{
+	left:100px;
+	top:auto;
+	bottom:0;
+	height:34px;
+	width:auto;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+}
+
+.dpSocialBar_container.top .dpSocialBar_icon, .dpSocialBar_container.bottom .dpSocialBar_icon{
+	position: absolute;
+}
+
+.dpSocialBar_container.right .dpSocialBar_wrap {
+	-moz-border-radius: 3px 0 0 3px;
+	-webkit-border-radius: 3px 0 0 3px;
+	border-radius: 3px 0 0 3px;
+}
+
+.dpSocialBar_container.top .dpSocialBar_wrap {
+	-moz-border-radius: 0 0 3px 3px;
+	-webkit-border-radius: 0 0 3px 3px;
+	border-radius: 0 0 3px 3px;
+}
+
+.dpSocialBar_container.bottom .dpSocialBar_wrap {
+	-moz-border-radius: 3px 3px 0 0;
+	-webkit-border-radius: 3px 3px 0 0;
+	border-radius: 3px 3px 0 0;
+}
+
+.dpSocialBar_container.top .dpSocialBar_arrow_down {
+	right:-30px;
+	top:5px;
+	left:auto;
+	bottom:auto;
+	background-position:0 -66px !important;
+}
+
+.dpSocialBar_container.top .dpSocialBar_arrow_down:hover, .dpSocialBar_container.bottom .dpSocialBar_arrow_down:hover {
+	background-position:-22px -66px !important;
+}
+
+.dpSocialBar_container.top .dpSocialBar_arrow_down:active, .dpSocialBar_container.bottom .dpSocialBar_arrow_down:active {
+	background-position:-44px -66px !important;
+}
+
+.dpSocialBar_container.bottom .dpSocialBar_arrow_down {
+	right:-30px;
+	bottom:5px;
+	left:auto;
+	top:auto;
+	background-position:0 -66px !important;
+}
+
+.dpSocialBar_container.top .dpSocialBar_arrow_up {
+	left:-30px;
+	top:5px;
+	bottom:auto;
+	background-position:0 -44px !important;
+}
+
+.dpSocialBar_container.bottom .dpSocialBar_arrow_up {
+	left:-30px;
+	bottom:5px;
+	top:auto;
+	background-position:0 -44px !important;
+}
+
+.dpSocialBar_container.top .dpSocialBar_arrow_up:hover, .dpSocialBar_container.bottom .dpSocialBar_arrow_up:hover {
+	background-position:-22px -44px !important;
+}
+
+.dpSocialBar_container.top .dpSocialBar_arrow_up:active, .dpSocialBar_container.bottom .dpSocialBar_arrow_up:active {
+	background-position:-44px -44px !important;
+}
+
+.dpSocialBar_container.top .dpSocialBar_wrap a, .dpSocialBar_container.bottom .dpSocialBar_wrap a {
+	margin:5px;
+}
+
+/*** SKIN ***/
+
+.dpSocialBar_container.dark {
+	border: 1px solid #000;
+}
+
+.dpSocialBar_container.dark .dpSocialBar_wrap { 
+	border:1px solid #646464;
+	background:#282828;
+}
+
+.dpSocialBar_container.dark .dpSocialBar_arrow_down {
+	background:url(images/socialNetworking/arrows_dark.png) no-repeat 0 0;
+}
+
+.dpSocialBar_container.dark .dpSocialBar_arrow_down:hover {
+	background-position:-22px 0;
+}
+
+.dpSocialBar_container.dark .dpSocialBar_arrow_down:active {
+	background-position:-44px 0;
+}
+
+.dpSocialBar_container.dark .dpSocialBar_arrow_up {
+	background:url(images/socialNetworking/arrows_dark.png) no-repeat 0 -22px;
+}
+
+.dpSocialBar_container.dark .dpSocialBar_arrow_up:hover {
+	background-position:-22px -22px;
+}
+
+.dpSocialBar_container.dark .dpSocialBar_arrow_up:active {
+	background-position:-44px -22px;
+}
+
+.dpSocialBar_container.dark .dpSocialBar_caption {
+	border:1px solid #000;
+}
+
+.dpSocialBar_container.dark .dpSocialBar_caption span {
+	color:#fff;
+	background:#282828;
+	border:1px solid #646464;
+}
+
+/*** ICONS ***/
+
+.dpSocialBar_container .dpSocialBar_wrap .dpSocialBar_icon_twitter {
+	background:url(images/socialNetworking/btn_twitter_24.png) no-repeat transparent 0 0;
+}
+
+.dpSocialBar_container .dpSocialBar_wrap .dpSocialBar_icon_facebook {
+	background:url(images/socialNetworking/btn_facebook_24.png) no-repeat transparent;
+}
+
+.dpSocialBar_container .dpSocialBar_wrap .dpSocialBar_icon_linkedin {
+	background:url(images/socialNetworking/btn_linkedin_24.png) no-repeat transparent;
+}
+
+.dpSocialBar_container .dpSocialBar_wrap .dpSocialBar_icon_flickr {
+	background:url(images/socialNetworking/btn_flickr_24.png) no-repeat transparent;
+}
+
+.dpSocialBar_container .dpSocialBar_wrap .dpSocialBar_icon_skype {
+	background:url(images/socialNetworking/btn_skype_24.png) no-repeat transparent;
+}
+
+.dpSocialBar_container .dpSocialBar_wrap .dpSocialBar_icon_rss {
+	background:url(images/socialNetworking/btn_rss_24.png) no-repeat transparent;
+}
+
+.dpSocialBar_container .dpSocialBar_wrap .dpSocialBar_icon_google {
+	background:url(images/socialNetworking/btn_google_24.png) no-repeat transparent;
+}
+
+.dpSocialBar_container .dpSocialBar_wrap .dpSocialBar_icon_contact {
+	background:url(images/socialNetworking/btn_contact_24.png) no-repeat transparent;
+}
+
+.dpSocialBar_container .dpSocialBar_wrap .dpSocialBar_icon_youtube {
+	background:url(images/socialNetworking/btn_youtube_24.png) no-repeat transparent;
+}
+
+.dpSocialBar_container .dpSocialBar_wrap .dpSocialBar_icon_orkut {
+	background:url(images/socialNetworking/btn_orkut_24.png) no-repeat transparent;
+}
+
+.dpSocialBar_container .dpSocialBar_wrap .dpSocialBar_icon_myspace {
+	background:url(images/socialNetworking/btn_myspace_24.png) no-repeat transparent;
+}
+
+.dpSocialBar_container .dpSocialBar_wrap .dpSocialBar_icon_digg {
+	background:url(images/socialNetworking/btn_digg_24.png) no-repeat transparent;
+}
+
+.dpSocialBar_container .dpSocialBar_wrap .dpSocialBar_icon_lastfm {
+	background:url(images/socialNetworking/btn_lastfm_24.png) no-repeat transparent;
+}
+
+.dpSocialBar_container .dpSocialBar_wrap .dpSocialBar_icon_delicious {
+	background:url(images/socialNetworking/btn_delicious_24.png) no-repeat transparent;
+}
+
+.dpSocialBar_container .dpSocialBar_wrap .dpSocialBar_icon_tumblr {
+	background:url(images/socialNetworking/btn_tumblr_24.png) no-repeat transparent;
+}
+
+.dpSocialBar_container .dpSocialBar_wrap .dpSocialBar_icon_picasa {
+	background:url(images/socialNetworking/btn_picasa_24.png) no-repeat transparent;
+}
+
+.dpSocialBar_container .dpSocialBar_wrap .dpSocialBar_icon_vimeo {
+	background:url(images/socialNetworking/btn_vimeo_24.png) no-repeat transparent;
+}
+
+.dpSocialBar_container .dpSocialBar_wrap .dpSocialBar_icon_reddit {
+	background:url(images/socialNetworking/btn_reddit_24.png) no-repeat transparent;
+}
+
+.dpSocialBar_container .dpSocialBar_wrap .dpSocialBar_icon_technorati {
+	background:url(images/socialNetworking/btn_technorati_24.png) no-repeat transparent;
+}
+
+.dpSocialBar_container .dpSocialBar_wrap .dpSocialBar_icon_website {
+	background:url(images/socialNetworking/btn_website_24.png) no-repeat transparent;
+}

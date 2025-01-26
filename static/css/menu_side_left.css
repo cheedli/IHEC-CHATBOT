@@ -1,0 +1,113 @@
+.menuBlocLeft{
+    border-right: 1px solid #dedede;
+}
+
+.menuBlocLeft ul , .menuBlocLeft li{
+    margin: 0;
+    text-decoration: none;
+}
+
+.menuBlocLeft li,.menuBlocLeft ul{
+    list-style-type: none;
+    margin:0;
+    padding:0
+}
+
+.menuBlocLeft li::marker {
+    display: none;
+}
+
+.menuBlocLeft a{
+    font-size: 0.9rem !important;
+    line-height: 37px;
+    color: #0f0f20;
+    margin-left: 10px;
+    transition: all 0.5s ease
+}
+
+.menuBlocLeft a:hover{
+    margin-left:15px;
+}
+
+
+.menuBlocLeft .titleBlocMenu{
+    font-size: 22px;
+    color: #503e3c;
+    padding: 10px;
+    border-bottom: 1px dashed #dedede;
+    display: block;
+    text-transform:  uppercase;
+    margin: 15px 0 5px;
+}
+
+.menuBlocLeft>li{
+    padding-bottom: 7px;
+    padding-top: 7px;
+    list-style-type: none;
+    margin-left: 5px;
+}
+
+
+
+
+.menuBlocLeft .l2{
+
+}
+
+.menuBlocLeft>li>ul li,.menuBlocLeft>li{
+    border-bottom: 1px dashed #dedede;
+}
+
+.menuBlocLeft>li>ul>li a{
+    padding: 5px 20px;
+    transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #eeeeee96;
+}
+.menuBlocLeft>li>ul>li>a:first-child{
+    border: none;
+}
+.menuBlocLeft>li>ul>li a i{
+    margin-right: 10px;
+}
+
+.menuBlocLeft>li>ul>li a:hover{
+    background: #f6f6f666;
+    padding: 5px 25px;
+}
+
+.menuBlocLeft>li>ul>li>ul>li a{
+    padding: 0px 10px;
+    transition: all 0.5s ease;
+}
+
+.menuBlocLeft>li>ul>li>ul>li a:hover{
+    padding: 0px 15px;
+}
+
+.menuBlocLeftli>ul>li>ul>li>ul>li a{
+    padding:10px 60px;
+    transition: all 0.5s ease;
+}
+
+.menuBlocLeft>ul>li>ul>li>ul>li a:hover{
+    padding: 10px 55px ;
+}
+
+.menuBlocLeft>ul>li>ul>li i{
+    font-size: 5px;
+}
+.menuBlocLeft>ul li{
+    width:unset !important;
+}
+
+.menuBlocLeft li a:before{
+    font-family: "FontAwesome";
+    content: '\f105';
+    color: #0f0f20;
+    /* height: 15px; */
+    width: 15px;
+    font-size: 11px;
+    display: inline-block;
+}
