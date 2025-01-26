@@ -1074,6 +1074,60 @@
           "category": "Informations sur LIG-6.pdf - Voici les catégories pertinentes extractées du texte, accompagnées de questions et de réponses utiles pour les étudiants :",
           "question": "  Qu'est-ce que l'UE et comment est-elle équilibrée ?",
           "answer": "L'UE désigne le total des crédits attribués par un cours ou une unité académique. Elle peut être équilibrée en fonction de la répartition du volume horaire en présentiel, du nombre de cours et de la modalité d'évaluation."
+      },
+      {
+        "id": 181,
+        "category": "Curriculum Questions",
+        "question": "Quelles sont nos licences proposées ?",
+        "answer": "Vous pouvez consulter les informations sur nos licences ici : https://ihec.rnu.tn/fr/nos-licences"
+      },
+      {
+        "id": 182,
+        "category": "Curriculum Questions",
+        "question": "Quels sont les éléments du menu du site IHEC ?",
+        "answer": "Le menu comprend : Accueil (https://ihec.rnu.tn/fr/accueil), Histoire de IHEC (https://ihec.rnu.tn/fr/ihec/histoire-de-lihec), Mission de IHEC (https://ihec.rnu.tn/fr/ihec/mission-vision-et-valeurs), Projet (https://ihec.rnu.tn/fr/ihec/assurance-qualite/projets), Politique Qualité (https://ihec.rnu.tn/fr/ihec/assurance-qualite/politique-qualite), Direction Générale (https://ihec.rnu.tn/fr/ihec/gouvernance-ihec/direction-generale), Direction des Stages (https://ihec.rnu.tn/fr/ihec/gouvernance-ihec/direction-des-stages-et-de-louverture-sur-lenvironnement), Environnement (https://ihec.rnu.tn/fr/ihec/gouvernance-ihec/direction-des-stages-et-de-louverture-sur-lenvironnement), Secrétariat (https://ihec.rnu.tn/fr/ihec/gouvernance-ihec/secretariat-general), Organigramme (https://ihec.rnu.tn/fr/ihec/gouvernance-ihec/organigramme), Département de Gestion (https://ihec.rnu.tn/fr/ihec/departement/departement-gestion), Département des Finances (https://ihec.rnu.tn/fr/ihec/departement/departement-finance), Département de Méthodes Quantitatives (https://ihec.rnu.tn/fr/ihec/departement/departement-methodes-quantitatives)"
+      },
+      {
+        "id": 183,
+        "category": "Curriculum Questions",
+        "question": "Qu'est-ce que la Licence en Sciences de Gestion ?",
+        "answer": "La Licence en Sciences de Gestion est disponible ici : https://ihec.rnu.tn/fr/article/473/licence-en-sciences-de-gestion"
+      },
+      {
+        "id": 184,
+        "category": "Curriculum Questions",
+        "question": "Qu'est-ce que la Licence en Informatique de Gestion avec spécialité Business Intelligence ?",
+        "answer": "La Licence en Informatique de Gestion, spécialité Business Intelligence est disponible ici : https://ihec.rnu.tn/fr/article/470/licence-en-informatique-de-gestion-business-intelligence"
+      },
+      {
+        "id": 185,
+        "category": "Curriculum Questions",
+        "question": "Quelles sont les Masters disponibles à IHEC ?",
+        "answer": "Vous pouvez consulter les informations sur nos Masters ici : https://ihec.rnu.tn/fr/nos-masters"
+      },
+      {
+        "id": 186,
+        "category": "Curriculum Questions",
+        "question": "Qu'est-ce que le Master Recherche en Finance ?",
+        "answer": "Le Master Recherche en Finance est disponible ici : https://ihec.rnu.tn/fr/article/484/master-recherche-en-finance"
+      },
+      {
+        "id": 187,
+        "category": "Curriculum Questions",
+        "question": "Qu'est-ce que le Master de Recherche en Ingénierie Économique et Financière ?",
+        "answer": "Le Master de Recherche en Ingénierie Économique et Financière est disponible ici : https://ihec.rnu.tn/fr/article/485/master-de-recherche-en-ingenierie-economique-et-financiere"
+      },
+      {
+        "id": 188,
+        "category": "Curriculum Questions",
+        "question": "Qu'est-ce que le Mastère de Recherche en Marketing ?",
+        "answer": "Le Mastère de Recherche en Marketing est disponible ici : https://ihec.rnu.tn/fr/article/483/mastere-de-recherche-en-marketing"
+      },
+      {
+        "id": 189,
+        "category": "Curriculum Questions",
+        "question": "Qu'est-ce que le MP en Analyste Financier ?",
+        "answer": "Le MP en Analyste Financier est disponible ici : https://ihec.rnu.tn/fr/article/492/mastere-professionnel-en-analyste-financier"
       }
   ]
 }

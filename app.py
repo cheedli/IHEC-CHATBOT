@@ -14,7 +14,7 @@ import ollama
 # -------------------------------------------------------------------
 JSON_PATH = "dataset.json"
 PDF_PATH  = "IHEC-PE-2018-2019-Campagne-Juillet-2020.pdf"
-MODEL     = "llama3.2"  # Change if needed
+MODEL     = "llama3.2" 
 
 # -------------------------------------------------------------------
 # Initialize embedding model
@@ -148,6 +148,8 @@ def build_prompt_with_context(query, index, chunks, dataset):
                             "réponds 'Je ne sais pas.' Pour les questions sur des données personnelles : "
                             "En tant qu'IA, je ne dois pas posséder des données personnelles. Ne mentionne jamais tes sources."
                                             "N'oubliez pas que vous aidez les étudiants, il est donc important de répondre de manière formelle et bienveillante.  "
+                          "Si vous avez un lien du site web dans la reponse affiche le   "
+
 
                         )
                     },
@@ -171,6 +173,8 @@ def build_prompt_with_context(query, index, chunks, dataset):
                 "Si aucune information pertinente n'existe ni dans le JSON ni dans le PDF, réponds uniquement : 'Je ne sais pas.' "
                 "Pour les questions sur des données personnelles, réponds : 'En tant qu'IA, je ne dois pas posséder ni traiter des données personnelles.' "
                 "N'oublie pas que tu aides les étudiants. Tes réponses doivent être formelles, bienveillantes et détaillées, tout en restant charmantes pour les encourager."
+                                      "Si vous avez un lien du site web dans la reponse affiche le   "
+
             )
         },
         {
