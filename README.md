@@ -134,3 +134,6 @@ By aligning with the foundational objectives described in the IHEC Data Processi
 
 ---
 The database was renewed using this repo : https://github.com/cheedli/IHEC-SCRIPTS
+
+
+The presentation link :https://www.canva.com/design/DAGdQRYDleI/7r3ub_NG5wUxhMrgTEXcmA/edit
